@@ -6,7 +6,8 @@ public class Account {
         this.balance = balance;
     }
 
-    public Account(){
+    public Account(String name){
+        this.name = name;
         this.balance = 0;
     }
 
@@ -14,6 +15,7 @@ public class Account {
         this.name = name;
         this.balance = balance;
     }
+
 
     public boolean whithdraw(double amount){
         if (amount <= balance && amount > 0){
@@ -38,6 +40,8 @@ public class Account {
     public void setName(String name){
         this.name = name;
     }
+
+    public double getBalance(){return balance; }
 
     public String toString(){
         return (name +" har " + balance + "kr på kontot.");
